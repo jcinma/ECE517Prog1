@@ -1,0 +1,36 @@
+<h1>Library Book Search</h1>
+
+<table>
+	<tr>
+		<th>ISBN: </th>
+		<td><input type="text" name="isbn"></td>
+	</tr>
+	<tr>
+		<th>Title: </th>
+		<td><input type="text" name="title"></td>
+	</tr>
+	<tr>
+		<th>Author(s): </th>
+		<td><input type="text" name="author"></td>
+	</tr>
+	<tr>
+		<th>Description: </th>
+		<td><input type="text" name="description"></td>
+	</tr>
+	<tr>
+		<th>Status: </th>
+		<td><select>
+			<option value="checked_out">Checked Out</option>
+			<option value="available">Available</option>
+		</select></td>
+	</tr>
+</table>
+<br />
+
+<% form_tag :method => 'get' do %>
+  <p>
+  	Form contents
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
