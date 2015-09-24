@@ -7,6 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if admin_signed_in? || user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+    <%= link_to('Login as user', new_user_session_path)  %>  
+  <%= link_to('Login as admin', new_admin_session_path)  %>  
+  </li>
+<% end %>
+<%= link_to 'Books', books_path %>
+<%= link_to 'Users', users_path %>
 
 <%= yield %>
 
