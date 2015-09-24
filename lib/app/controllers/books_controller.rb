@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_filter :ensure_user!, only: [:index, :show]
+  before_filter :authenticate_admin!, only: [:edit, :update, :new, :create, :destroy
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
@@ -62,6 +64,10 @@ class BooksController < ApplicationController
   end
 
   private
+    def ensure_user!
+  unless (admin_signed_in? || user_signed_in?)
+	redirect_to root_path
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_book
       @book = Book.find(params[:id])
