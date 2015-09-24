@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users   scope "/admin" do
+  resources :users
+end
   resources :books
-  devise_for :admins
+  devise_for :admins  :path_prefix => 'my'
+resources :admins
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
