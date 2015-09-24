@@ -6,7 +6,7 @@ end
   resources :books
   devise_for :admins, :path_prefix => 'my'
 resources :admins
-root 'static#adminhome'
+root 'books#book_search'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
