@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+#require PaperTrail
   before_filter :ensure_user!, only: [:index, :show]
   before_filter :authenticate_admin!, only: [:edit, :update, :new, :create, :destroy]
   before_action :set_book, only: [:show, :edit, :update, :destroy]
@@ -6,14 +7,27 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    #@books = Book.all
     #if params[:search]
     #  @books = Book.search(params[:search]).order("created_at DESC")
     #else
     #  @books = Book.order("created_at DESC")
     #end
+	if params[:search]
+	@search="%#{params[:search]}%"
+      #@books = Book.search(params[:search]).order("created_at DESC")
+	  @books = Book.where("ISBN LIKE ? or title LIKE ? or description LIKE ? or author LIKE ?", @search, @search, @search, @search)
+	  
+    else
+      @books = Book.order("created_at DESC")
+    end 
   end
-
+  def history
+  @versions = PaperTrail::Version.order('created_at DESC')
+end
+  def book_search
+   @books = Book.order("created_at DESC")
+  end
   # GET /books/1
   # GET /books/1.json
   def show
@@ -81,6 +95,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:ISBN, :title, :description, :author, :status, :user)
+      params.require(:book).permit(:ISBN, :title, :description, :author, :status, :user, :search)
     end
 end

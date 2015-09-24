@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope "/admin" do
   resources :users
 end
+get '/books/history', to: 'books#history', as: :books_history
   resources :books
   devise_for :admins, :path_prefix => 'my'
 resources :admins
