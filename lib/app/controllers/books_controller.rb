@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     #  @books = Book.order("created_at DESC")
     #end
 	if params[:search]
-	@search="%#{params[:search]}%"
+	   @search="%#{params[:search]}%"
       #@books = Book.search(params[:search]).order("created_at DESC")
 	  @books = Book.where("ISBN LIKE ? or title LIKE ? or description LIKE ? or author LIKE ?", @search, @search, @search, @search)
 	  
@@ -95,6 +95,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:ISBN, :title, :description, :author, :status, :user, :search)
+      params.require(:book).permit(:ISBN, :title, :description, :author, :status, :email, :search)
     end
 end

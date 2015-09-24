@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
 	
-	has_paper_trail on: [:update, :create]
+	has_paper_trail on: [:update, :create], :ignore => [:title, :author, :description, :ISBN]
 
 	
 
