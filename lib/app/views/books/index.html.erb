@@ -25,6 +25,26 @@
         <td><%= book.status %></td>
         <td><%= book.user %></td>
         <td><%= link_to 'Show', book %></td>
+		<% @checkout = Checkout.new %>
+		<% @checkout.book_id = book.ISBN %>
+	<td>	<%= form_for(@checkout) do |f| %>
+  <% if @checkout.errors.any? %>
+  
+      <h2><%= pluralize(@checkout.errors.count, "error") %> prohibited this checkout from being saved:</h2>
+
+      <ul>
+      <% @checkout.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+  
+  <% end %>
+<input id="f.book_id" name="f.book_id" label="f.book_id "type="hidden" value="123" />
+  <div class="actions">
+    <%= f.submit %>
+  
+<% end %> </td>
+		<td><%= link_to 'Checkout',"checkouts(checkout)", method: :post%></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
