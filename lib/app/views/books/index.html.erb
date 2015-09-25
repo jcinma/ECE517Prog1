@@ -24,11 +24,13 @@
         <td><%= book.author %></td>
         <td><%= book.status %></td>
         <td><%= book.user %></td>
+		
         <td><%= link_to 'Show', book %></td>
 		<% @checkout = Checkout.new %>
 		<% @checkout.book_id = book.ISBN %>
-	<td>	<%= form_for(@checkout) do |f| %>
-  <% if @checkout.errors.any? %>
+	<td>	<% if(book.status =="available") %>
+	<%= form_for(@checkout) do |f| %>
+	<% if @checkout.errors.any? %>
   
       <h2><%= pluralize(@checkout.errors.count, "error") %> prohibited this checkout from being saved:</h2>
 
@@ -39,10 +41,16 @@
       </ul>
   
   <% end %>
-<input id="f.book_id" name="f.book_id" label="f.book_id "type="hidden" value="123" />
+    <div>
+    <br>
+    <%= f.hidden_field :book_id, :value =>book.id %>
+	 <%= f.hidden_field :status, :value =>"Checkout" %>
+
+  </div>
+
   <div class="actions">
     <%= f.submit %>
-  
+  <% end %>
 <% end %> </td>
 		<td><%= link_to 'Checkout',"checkouts(checkout)", method: :post%></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>

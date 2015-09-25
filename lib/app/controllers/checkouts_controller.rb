@@ -1,6 +1,6 @@
 class CheckoutsController < ApplicationController
   before_action :set_checkout, only: [:show, :edit, :update, :destroy]
-
+@Admin
   # GET /checkouts
   # GET /checkouts.json
   def index
@@ -24,11 +24,17 @@ class CheckoutsController < ApplicationController
   # POST /checkouts
   # POST /checkouts.json
   def create
+  
+  book = Book.new
+  
 	#@checkout = Checkout.new
 	#@checkout.book_id = @book.id
 	#@checkout.user_id = @user_id
    @checkout = Checkout.new(checkout_params)
-
+	book.id = @checkout.book_id
+	book.status="checkout"
+	book.update()	
+	@checkout.user_id = current_admin.id
     respond_to do |format|
       if @checkout.save
         format.html { redirect_to @checkout, notice: 'Checkout was successfully created.' }
@@ -59,7 +65,7 @@ class CheckoutsController < ApplicationController
   def destroy
     @checkout.destroy
     respond_to do |format|
-      format.html { redirect_to checkouts_url, notice: 'Checkout was successfully destroyed.' }
+	  format.html { redirect_to checkouts_url, notice: 'Checkout was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -72,7 +78,7 @@ class CheckoutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def checkout_params
-      params.require(:checkout).permit(:book_id)
+      params.require(:checkout).permit(:book_id, :status)
 	  
     end
 end
