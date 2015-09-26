@@ -1,17 +1,56 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+book_with_all_credentials:
+ ISBN: I1234
+ title: Harry Potter
+ description: Novel
+ author: Rowling
+ status: Available
+ user: pmukher
+  
+book_with_null_user:
+ ISBN: I1235
+ title: Harry Potter
+ description: Novel
+ author: Rowling
+ status: Available
+ user: NULL
 
-one:
-  ISBN: MyString
-  title: MyString
-  description: MyText
-  author: MyText
-  status: MyString
-  user: MyString
-
-two:
-  ISBN: MyString
-  title: MyString
-  description: MyText
-  author: MyText
-  status: MyString
-  user: MyString
+book_with_null_title:
+ ISBN: I1236
+ title: NULL
+ description: Novel
+ author: Rowling
+ status: Available
+ user: pmukher
+  
+book_with_null_description:
+ ISBN: I1237
+ title: Harry Potter
+ description: NULL
+ author: Rowling
+ status: Available
+ user: pmukher
+  
+book_with_null_author:
+ ISBN: I1238
+ title: Harry Potter
+ description: Novel
+ author: NULL
+ status: Available
+ user: pmukher
+  
+book_with_null_status:
+  ISBN: I1239
+  title: Harry Potter
+  description: Novel
+  author: Rowling
+  status: NULL
+  user: pmukher
+  
+book_with_duplicate_ISBN:
+  ISBN: I1239
+  title: Harry Potter
+  description: Novel
+  author: Rowling
+  status: Available
+  user: pmukher
