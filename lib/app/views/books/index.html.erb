@@ -52,10 +52,11 @@
     <%= f.submit %>
   <% end %>
 <% end %> </td>
-		
+		<% if(admin_signed_in?) %>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

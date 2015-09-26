@@ -8,7 +8,8 @@ get '/books/history', to: 'books#history', as: :books_history
   resources :books
   devise_for :admins, :path_prefix => 'my'
 resources :admins
-root 'books#book_search'
+get 'book_search' => 'books#book_search'
+root 'static#adminhome'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
