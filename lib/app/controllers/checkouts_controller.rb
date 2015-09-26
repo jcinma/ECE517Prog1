@@ -33,10 +33,16 @@ class CheckoutsController < ApplicationController
    @checkout = Checkout.new(checkout_params)
  book = Book.find(@checkout.book_id)
  #book = Book.new  
- @checkout.user_id = current_user.id
-	book.status="checkout"
-	book.update(status: 'checkout', user_id: @checkout.user_id)
+ 
+	if(@checkout.status == 'Checkout')
+	@checkout.user_id = current_user.id
+	book.update(status: 'Checkout', user_id: @checkout.user_id)
+	end
+	else if(@checkout.status == 'Return')
+	@checkout.user_id= book.user_id
+	book.update(status: 'Available', user_id: "")
 	
+	end
     respond_to do |format|
       if @checkout.save
         format.html { redirect_to @checkout, notice: 'Checkout was successfully created.' }
