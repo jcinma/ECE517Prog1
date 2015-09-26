@@ -19,7 +19,32 @@
   <strong>Author:</strong>
   <%= @book.author %>
 </p>
+<h3>Checked Out History</h3>
 
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+       <th>Status</th>
+	   <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% checkouts = Checkout.where(book_id: @book.id) %> 
+    <% checkouts.each do |book| %>
+      <tr>
+        <td><%= book.user_id %></td>
+        <td><%= book.status %></td>
+        <td><%= book.created_at %></td>
+       
+       
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <p>
   <strong>Status:</strong>
   <%= @book.status %>
@@ -28,6 +53,9 @@
 <p>
   <strong>User:</strong>
   <%= @book.user %>
+</p>
+<p>
+
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
