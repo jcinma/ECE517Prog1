@@ -41,7 +41,7 @@ Log In As an Admin and Log Out:
 4.	The admin will be logged in. To Log Out click on the Logout button 
 
 The credentials of the super Admin are as follows:-
-Email: admin@test.com
+Email: kunal@g.com
 Password: qwerty123
 
 Search for a Book as an User
