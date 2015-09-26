@@ -54,10 +54,18 @@ before_filter :authenticate_admin!
   # DELETE /admins/1
   # DELETE /admins/1.json
   def destroy
-    @admin.destroy
+	if(@admin.id ==6 || @admin.id == current_admin.id)
+    respond_to do |format|
+      format.html { redirect_to admins_url, notice: 'Cannot Delete this admin.' }
+      format.json { head :no_content }	
+   end
+   else 
+   @admin.destroy
     respond_to do |format|
       format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
       format.json { head :no_content }
+    
+    end
     end
   end
 
