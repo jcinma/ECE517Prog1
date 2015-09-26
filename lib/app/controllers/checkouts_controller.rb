@@ -77,7 +77,9 @@ class CheckoutsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+	def user_history
+	end
+	
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_checkout

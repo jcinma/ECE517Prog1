@@ -10,6 +10,7 @@ get '/books/history', to: 'books#history', as: :books_history
 resources :admins
 get 'book_search' => 'books#book_search'
 root 'static#adminhome'
+get '/user_history' =>'checkouts#user_history'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
