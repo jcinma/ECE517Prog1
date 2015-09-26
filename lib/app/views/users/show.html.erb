@@ -15,6 +15,15 @@
   <strong>Last name:</strong>
   <%= @user.last_name %>
 </p>
+<p>
+  <strong>Checked Out books</strong>
+	<% books = Book.where(user_id: @user.id) %> 
+   
+	<% books.each do |c| %>
+  <%= c.title %>
+  <% end %>
+  
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

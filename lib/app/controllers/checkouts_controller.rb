@@ -25,16 +25,18 @@ class CheckoutsController < ApplicationController
   # POST /checkouts.json
   def create
   
-  book = Book.new
+ 
   
 	#@checkout = Checkout.new
 	#@checkout.book_id = @book.id
 	#@checkout.user_id = @user_id
    @checkout = Checkout.new(checkout_params)
-	book.id = @checkout.book_id
+ book = Book.find(@checkout.book_id)
+ #book = Book.new  
+ @checkout.user_id = current_user.id
 	book.status="checkout"
-	book.update()	
-	@checkout.user_id = current_admin.id
+	book.update(status: 'checkout', user_id: @checkout.user_id)
+	
     respond_to do |format|
       if @checkout.save
         format.html { redirect_to @checkout, notice: 'Checkout was successfully created.' }

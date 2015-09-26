@@ -28,7 +28,7 @@
         <td><%= link_to 'Show', book %></td>
 		<% @checkout = Checkout.new %>
 		<% @checkout.book_id = book.ISBN %>
-	<td>	<% if(book.status =="available") %>
+	<td>	<% if(book.status =="Available") %>
 	<%= form_for(@checkout) do |f| %>
 	<% if @checkout.errors.any? %>
   
