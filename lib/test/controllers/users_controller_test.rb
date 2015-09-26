@@ -1,7 +1,26 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+include Devise::TestHelpers
+  setup do
+    @user = users(:user1)
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(@user)
+  end
+
+  test "should display user" do
+    get :show, id: @user
+    assert_response :success
+  end
+
+  test "should destroy user" do
+    assert_difference('User.count', -1) do
+    delete :destroy, id: @user
+    end
+	assert_redirected_to users_path
+  end
 end
