@@ -45,7 +45,7 @@ end
   # POST /books
   # POST /books.json
   def create
-	sd=sddfdsf
+
 	@book = Book.new(book_params)
 
     respond_to do |format|
