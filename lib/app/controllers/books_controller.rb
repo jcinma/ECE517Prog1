@@ -76,13 +76,19 @@ end
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
-    @book.destroy
-    respond_to do |format|
-      format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
-      format.json { head :no_content }
+  respond_to do |format|
+    if(@book.status=="Available")
+		@book.destroy
+		
+		format.html { redirect_to books_url, notice: 'Book was successfully deleted.' }
+		format.json { head :no_content }
+	else
+
+		format.html { redirect_to books_url, notice: 'Book cannot be deleted since it is checked out.' }
+		format.json { head :no_content }	
     end
   end
-
+end
   private
     def ensure_user!
   unless (admin_signed_in? || user_signed_in?)
