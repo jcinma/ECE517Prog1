@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 #require PaperTrail
   before_filter :ensure_user!, only: [:index, :show]
-  before_filter :authenticate_admin!, only: [:edit, :update, :new, :create, :destroy]
+  before_filter :authenticate_admin!, only: [:edit, :update, :create, :destroy]
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
@@ -47,6 +47,7 @@ end
   def create
 
 	@book = Book.new(book_params)
+
 
     respond_to do |format|
       if @book.save
