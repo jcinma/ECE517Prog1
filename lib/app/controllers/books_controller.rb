@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 #require PaperTrail
   before_filter :ensure_user!, only: [:index, :show]
-  before_filter :authenticate_admin!, only: [:edit, :update, :create, :destroy]
+  before_filter :authenticate_admin!, only: [:edit, :update, :destroy]
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
