@@ -16,11 +16,14 @@ class BooksController < ApplicationController
 	if params[:search]
 	   @search="%#{params[:search]}%"
       #@books = Book.search(params[:search]).order("created_at DESC")
-	  @books = Book.where("ISBN LIKE ? or title LIKE ? or description LIKE ? or author LIKE ?", @search, @search, @search, @search)
+	  @books = Book.where("ISBN LIKE ? or title LIKE ? or description LIKE ? or author LIKE ?", @search, @search, @search, @search).where.not(suggested: 't')
 	  
     else
-      @books = Book.order("created_at DESC")
+      @books = Book.order("created_at DESC").where.not(suggested: 't')
     end 
+  end
+  def suggested_books
+    @books = Book.where(suggested: 't')
   end
   def history
   @versions = PaperTrail::Version.order('created_at DESC')
@@ -47,6 +50,12 @@ end
   def create
 
 	@book = Book.new(book_params)
+
+  if (user_signed_in?)
+    @book.suggested = true
+  else 
+    @book.suggested = false
+  end
 
 
     respond_to do |format|

@@ -11,6 +11,7 @@ resources :admins
 get 'book_search' => 'books#book_search'
 root 'static#adminhome'
 get '/user_history' =>'checkouts#user_history'
+get 'suggested_books' => 'books#suggested_books'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
