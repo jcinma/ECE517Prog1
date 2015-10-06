@@ -22408,3 +22408,1559 @@ Processing by CheckoutsController#user_history as HTML
   [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
   Rendered checkouts/user_history.html.erb within layouts/application (9.1ms)
 Completed 200 OK in 69ms (Views: 66.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:18:06 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  Rendered checkouts/user_history.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `column_names' for #<Checkout:0x007f8756f108f8>):
+    15:   <tbody>
+    16:   <% books = Checkout.joins('LEFT OUTER JOIN books ON books.id=checkouts.book_id') %> 
+    17:     <% books.each do |book| %>
+    18:     <% puts book.column_names %>
+    19:       <tr>
+    20:         <td><%= book.book_id %></td>
+    21:         <td><%= book.status %></td>
+  app/views/checkouts/user_history.html.erb:18:in `block in _app_views_checkouts_user_history_html_erb___1627841385314313050_70109588762380'
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109588762380'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.2ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:18:06 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  Rendered checkouts/user_history.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `column_names' for #<Checkout:0x007f87561f57b8>):
+    15:   <tbody>
+    16:   <% books = Checkout.joins('LEFT OUTER JOIN books ON books.id=checkouts.book_id') %> 
+    17:     <% books.each do |book| %>
+    18:     <% puts book.column_names %>
+    19:       <tr>
+    20:         <td><%= book.book_id %></td>
+    21:         <td><%= book.status %></td>
+  app/views/checkouts/user_history.html.erb:18:in `block in _app_views_checkouts_user_history_html_erb___1627841385314313050_70109624995700'
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109624995700'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.0ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:18:52 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.3ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  Rendered checkouts/user_history.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `columns' for #<Checkout:0x007f87534ae9f8>):
+    15:   <tbody>
+    16:   <% books = Checkout.joins('LEFT OUTER JOIN books ON books.id=checkouts.book_id') %> 
+    17:     <% books.each do |book| %>
+    18:     <% puts book.columns %>
+    19:       <tr>
+    20:         <td><%= book.book_id %></td>
+    21:         <td><%= book.status %></td>
+  app/views/checkouts/user_history.html.erb:18:in `block in _app_views_checkouts_user_history_html_erb___1627841385314313050_70109597514480'
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109597514480'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.1ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:21:42 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  Rendered checkouts/user_history.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 84ms (Views: 81.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:21:43 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:21:59 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:21:59 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:22:52 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.2ms)[0m  SELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered checkouts/user_history.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    21:         <td><%= book.user_id %></td>
+    22:         <td><%= book.status %></td>
+    23:         <td><%= book.created_at %></td>
+    24:         <td><%= book.book.id %></td>
+    25:         <% @checkout = Checkout.new %>
+    26: 		<td>
+    27: 		<% if(book.status =="Checkout") %>
+  app/views/checkouts/user_history.html.erb:24:in `block in _app_views_checkouts_user_history_html_erb___1627841385314313050_70109652503640'
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109652503640'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-06 10:23:05 -0400
+Processing by StaticController#adminhome as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered static/adminhome.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:23:05 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:23:07 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:26:58 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.2ms)[0m  SELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:26:58 -0400
+
+
+Started DELETE "/my/admins/sign_out" for ::1 at 2015-10-06 10:27:02 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+etVh9DSEpvD25r0bGO3mOwLeu6pokcBL46ujMWAsEvJ78bweC8ArfxMeSo58cKvmVdgN+t3LIJLfT9LerJgAQ=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-06 10:27:02 -0400
+Processing by StaticController#adminhome as HTML
+  Rendered static/adminhome.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/my/admins/sign_in" for ::1 at 2015-10-06 10:27:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/my/admins/sign_in" for ::1 at 2015-10-06 10:27:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QjMXNmMlMlsevUaIUc/c+4hFihwT1jtVjeRDltYPeVihG09OFN1ANLiAz27Xo6lB0Mv0csegUr3K3XdLQZlaag==", "admin"=>{"email"=>"admin@library.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ?  ORDER BY "admins"."id" ASC LIMIT 1[0m  [["email", "admin@library.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "admins" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["last_sign_in_at", "2015-10-06 14:27:30.861212"], ["current_sign_in_at", "2015-10-06 14:27:30.861212"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-10-06 14:27:30.862056"], ["id", 6]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-10-06 10:27:30 -0400
+Processing by StaticController#adminhome as HTML
+  Rendered static/adminhome.html.erb within layouts/application (0.1ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ?  ORDER BY "admins"."id" ASC LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books" for ::1 at 2015-10-06 10:27:35 -0400
+Processing by BooksController#index as HTML
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."id" = ?  ORDER BY "admins"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"  ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/my/admins/sign_out" for ::1 at 2015-10-06 10:27:39 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8jjCWZTJgtU7kfwA4+hSxx3vPPhsjf0A1NjYQ9L/uL79H3F4KdHudNemPDkA8TmGaqiMevRuwZPU9eVEYCpiwQ=="}
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."id" = ?  ORDER BY "admins"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-06 10:27:39 -0400
+Processing by StaticController#adminhome as HTML
+  Rendered static/adminhome.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-10-06 10:27:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-06 10:27:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZMKwUnMyQW5fQOASjjWlU/+M/ZgIhJyiTYJHMZ4zg5llRkpSFFmK7pWXoVsHWIqrJXoPfRy2/ErQM1bYQCERg==", "user"=>{"email"=>"jcinma@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "jcinma@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-06 14:06:36.524892"], ["current_sign_in_at", "2015-10-06 14:27:47.355122"], ["sign_in_count", 5], ["updated_at", "2015-10-06 14:27:47.355892"], ["id", 5]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2015-10-06 10:27:47 -0400
+Processing by StaticController#adminhome as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."user_id" = ?  [["user_id", 5]]
+  Rendered static/adminhome.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for ::1 at 2015-10-06 10:27:51 -0400
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"  ORDER BY created_at DESC
+  Rendered books/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/8" for ::1 at 2015-10-06 10:27:56 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."book_id" = ?[0m  [["book_id", 8]]
+  Rendered books/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/5" for ::1 at 2015-10-06 10:28:02 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.1ms)[0m  SELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."book_id" = ?  [["book_id", 5]]
+  Rendered books/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/6" for ::1 at 2015-10-06 10:28:04 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."book_id" = ?[0m  [["book_id", 6]]
+  Rendered books/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/4" for ::1 at 2015-10-06 10:28:10 -0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCheckout Load (0.1ms)[0m  SELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."book_id" = ?  [["book_id", 4]]
+  Rendered books/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for ::1 at 2015-10-06 10:31:46 -0400
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"  ORDER BY created_at DESC
+  Rendered books/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:31:46 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:31:46 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:31:46 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:31:46 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:31:46 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:31:46 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:31:47 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:31:48 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.2ms)[0m  SELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered checkouts/user_history.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 108ms (Views: 104.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:33:07 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered checkouts/user_history.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Unknown key: :select. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :dependent, :primary_key, :inverse_of, :required, :foreign_type, :polymorphic, :touch, :counter_cache):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:   <% books = Checkout.joins('LEFT OUTER JOIN books ON books.id=checkouts.book_id') %> 
+    17:     <% books.each do |book| %>
+    18:       <tr>
+    19:         <td><%= book.id %></td>
+  app/models/checkout.rb:3:in `<class:Checkout>'
+  app/models/checkout.rb:1:in `<top (required)>'
+  app/views/checkouts/user_history.html.erb:16:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109621134420'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.7ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (24.8ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:34:56 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT  checkouts.*, book.title AS book_title FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 9]]
+SQLite3::SQLException: no such table: checkouts: SELECT  checkouts.*, book.title AS book_title FROM "books" WHERE "books"."id" = ? LIMIT 1
+  Rendered checkouts/user_history.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: checkouts: SELECT  checkouts.*, book.title AS book_title FROM "books" WHERE "books"."id" = ? LIMIT 1):
+    21:         <td><%= book.user_id %></td>
+    22:         <td><%= book.status %></td>
+    23:         <td><%= book.created_at %></td>
+    24:         <td><%= book.book %></td>
+    25:         <td><%= book.user %></td>
+    26:         <td><%= book.book_title %></td>
+    27:         <% @checkout = Checkout.new %>
+  app/views/checkouts/user_history.html.erb:24:in `block in _app_views_checkouts_user_history_html_erb___1627841385314313050_70109621134420'
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109621134420'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (25.5ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:35:21 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.4ms)[0m  SELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered checkouts/user_history.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `book_title' for #<Checkout:0x007f8759919ed8>):
+    22:         <td><%= book.status %></td>
+    23:         <td><%= book.created_at %></td>
+    24:         <td><%= book.user %></td>
+    25:         <td><%= book.book_title %></td>
+    26:         <% @checkout = Checkout.new %>
+    27: 		<td>
+    28: 		<% if(book.status =="Checkout") %>
+  app/views/checkouts/user_history.html.erb:25:in `block in _app_views_checkouts_user_history_html_erb___1627841385314313050_70109588742840'
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109588742840'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.1ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:37:38 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered checkouts/user_history.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `book_title' for #<Checkout:0x007f8759012da8>):
+    22:         <td><%= book.status %></td>
+    23:         <td><%= book.created_at %></td>
+    24:         <td><%= book.user %></td>
+    25:         <td><%= book.book_title %></td>
+    26:         <% @checkout = Checkout.new %>
+    27: 		<td>
+    28: 		<% if(book.status =="Checkout") %>
+  app/views/checkouts/user_history.html.erb:25:in `block in _app_views_checkouts_user_history_html_erb___1627841385314313050_70109588742840'
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109588742840'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.6ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.4ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:37:46 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.2ms)[0m  SELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered checkouts/user_history.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 113ms (Views: 109.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:37:46 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:38:11 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered checkouts/user_history.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:11 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:12 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:12 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:12 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:38:12 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:38:29 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered checkouts/user_history.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:38:29 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:38:42 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered checkouts/user_history.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:38:42 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:40:09 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:40:10 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:40:18 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" LEFT OUTER JOIN books ON books.id=checkouts.book_id WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:40:19 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:40:41 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.2ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:40:41 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:40:43 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:40:43 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:42:18 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:42:18 -0400
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:42:48 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:42:49 -0400
+
+
+Started GET "/" for ::1 at 2015-10-06 10:43:37 -0400
+Processing by StaticController#adminhome as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered static/adminhome.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/checkouts" for ::1 at 2015-10-06 10:43:39 -0400
+Processing by CheckoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UKOie/0PiYODgGpEcmItG3NiVqpSdLiiEaDMHTWdS0Rm3Nm3THheLLWB2wmdMEF/iFCzcOmU1WGk843c/cFkfQ==", "checkout"=>{"book_id"=>"6", "status"=>"Return"}, "commit"=>"Return"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "books" SET "status" = ?, "user_id" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["status", "Available"], ["user_id", nil], ["updated_at", "2015-10-06 14:43:39.222551"], ["id", 6]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "versions" ("event", "object", "whodunnit", "created_at", "item_id", "item_type") VALUES (?, ?, ?, ?, ?, ?)  [["event", "update"], ["object", "---\nid: 6\nISBN: '012225'\ntitle: |\n  Social Media\ndescription: light read\nauthor: Gandhi\nstatus: Checkout\nuser: \ncreated_at: 2015-09-25 22:47:42.671524000 Z\nupdated_at: 2015-10-06 12:02:26.473456000 Z\nuser_id: 5\n"], ["whodunnit", "5"], ["created_at", "2015-10-06 14:43:39.222551"], ["item_id", 6], ["item_type", "Book"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "checkouts" ("book_id", "status", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["book_id", 6], ["status", "Return"], ["user_id", 5], ["created_at", "2015-10-06 14:43:39.246968"], ["updated_at", "2015-10-06 14:43:39.246968"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/checkouts/54
+Completed 302 Found in 39ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/checkouts/54" for ::1 at 2015-10-06 10:43:39 -0400
+Processing by CheckoutsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.2ms)[0m  SELECT  "checkouts".* FROM "checkouts" WHERE "checkouts"."id" = ? LIMIT 1  [["id", 54]]
+  Rendered checkouts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 72ms (Views: 68.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:43:40 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCheckout Load (0.1ms)[0m  SELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?  [["user_id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered checkouts/user_history.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:44:29 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered checkouts/user_history.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `reverse!' for #<Checkout::ActiveRecord_Relation:0x007f87530c1c50>):
+    14:   </thead>
+    15: 
+    16:   <tbody>
+    17:   <% books = Checkout.where(user_id: current_user.id).reverse! %> 
+    18:     <% books.each do |book| %>
+    19:       <tr>
+    20:         <td><%= book.book.ISBN %></td>
+  app/views/checkouts/user_history.html.erb:17:in `_app_views_checkouts_user_history_html_erb___1627841385314313050_70109595468900'
+
+
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/josh/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.4ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:44:35 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/checkouts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/scaffolds.self-6a3ecd035fba5f7e7c1a0cc2bb0d57cd6b6313cc8ee8759b285b3cd9d7e5297d.css?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/application.self-d83f0260404d21bb71071cac209d33099e39b6dce0e82d18a1a13733fcaaba72.css?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/turbolinks.self-3ad9a189e282f93d4e08b6b4af94c9dd70e5aaa8557b7704050a875ed67faf50.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/checkouts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-06 10:44:35 -0400
+
+
+Started GET "/" for ::1 at 2015-10-06 10:44:47 -0400
+Processing by StaticController#adminhome as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."user_id" = ?  [["user_id", 5]]
+  Rendered static/adminhome.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for ::1 at 2015-10-06 10:44:50 -0400
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"  ORDER BY created_at DESC
+  Rendered books/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/checkouts" for ::1 at 2015-10-06 10:44:52 -0400
+Processing by CheckoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8oCZomm71NEI4ZOmd8HXCDCYPjJx3NbHDm9bEXPVGK3E/+Ju2MwDfj7gIuuYk7tsy6rb6Mo8uwS7PBrQu4k3lA==", "checkout"=>{"book_id"=>"6", "status"=>"Checkout"}, "commit"=>"Create Checkout"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "books" SET "status" = ?, "user_id" = ?, "updated_at" = ? WHERE "books"."id" = ?  [["status", "Checkout"], ["user_id", 5], ["updated_at", "2015-10-06 14:44:52.425460"], ["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "versions" ("event", "object", "whodunnit", "created_at", "item_id", "item_type") VALUES (?, ?, ?, ?, ?, ?)[0m  [["event", "update"], ["object", "---\nid: 6\nISBN: '012225'\ntitle: |\n  Social Media\ndescription: light read\nauthor: Gandhi\nstatus: Available\nuser: \ncreated_at: 2015-09-25 22:47:42.671524000 Z\nupdated_at: 2015-10-06 14:43:39.222551000 Z\nuser_id: \n"], ["whodunnit", "5"], ["created_at", "2015-10-06 14:44:52.425460"], ["item_id", 6], ["item_type", "Book"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "checkouts" ("book_id", "status", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["book_id", 6], ["status", "Checkout"], ["user_id", 5], ["created_at", "2015-10-06 14:44:52.434639"], ["updated_at", "2015-10-06 14:44:52.434639"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/checkouts/55
+Completed 302 Found in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/checkouts/55" for ::1 at 2015-10-06 10:44:52 -0400
+Processing by CheckoutsController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT  "checkouts".* FROM "checkouts" WHERE "checkouts"."id" = ? LIMIT 1[0m  [["id", 55]]
+  Rendered checkouts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_history" for ::1 at 2015-10-06 10:44:53 -0400
+Processing by CheckoutsController#user_history as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCheckout Load (0.1ms)[0m  [1mSELECT "checkouts".* FROM "checkouts" WHERE "checkouts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered checkouts/user_history.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.7ms)
