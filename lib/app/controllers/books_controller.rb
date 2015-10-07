@@ -90,7 +90,12 @@ end
   def destroy
   respond_to do |format|
     if(@book.status=="Available")
+    @checkouts = Checkout.where(book_id: @book.id)
+    @checkouts.each do |checkout|
+      checkout.destroy
+    end
 		@book.destroy
+
 		
 		format.html { redirect_to books_url, notice: 'Book was successfully deleted.' }
 		format.json { head :no_content }
