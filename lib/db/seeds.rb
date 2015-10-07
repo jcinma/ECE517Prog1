@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Admin.create!(email: 'admin@library.com', password: 'qwerty123', first_name: 'Default', last_name: 'Admin')
+Book.create(ISBN: '1', title: 'Moby Dick', description: 'Ishmael', author: 'Herman Melville', status: 'Available', suggested: 'false')

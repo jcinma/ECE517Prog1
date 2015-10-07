@@ -34,11 +34,11 @@
   <% books = Checkout.where(user_id: @user.id) %> 
     <% books.each do |book| %>
       <tr>
-        <td><%= book.ISBN %></td>
-        <td><%= book.title %></td>
-        <td><%= book.description %></td>
-        <td><%= book.author %></td>
-        <td><%= book.status %></td>
+        <td><%= book.book.ISBN %></td>
+        <td><%= book.book.title %></td>
+        <td><%= book.book.description %></td>
+        <td><%= book.book.author %></td>
+        <td><%= book.book.status %></td>
         <% @checkout = Checkout.new %>
 		<td>
 		<% if(book.status =="Checkout") %>
