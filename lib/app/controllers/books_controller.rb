@@ -57,6 +57,8 @@ end
     @book.suggested = false
   end
 
+  @book.status = "Available"
+
 
     respond_to do |format|
       if @book.save
