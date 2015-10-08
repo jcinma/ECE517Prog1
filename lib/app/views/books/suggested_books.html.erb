@@ -30,30 +30,7 @@
         <td><%= link_to 'Show', book %></td>
     <% @checkout = Checkout.new %>
     
-  <td>  <% if(book.status =="Available") %>
-  <%= form_for(@checkout) do |f| %>
-  <% if @checkout.errors.any? %>
   
-      <h2><%= pluralize(@checkout.errors.count, "error") %> prohibited this checkout from being saved:</h2>
-
-      <ul>
-      <% @checkout.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-  
-  <% end %>
-    <div>
-    <br>
-    <%= f.hidden_field :book_id, :value =>book.id %>
-   <%= f.hidden_field :status, :value =>"Checkout" %>
-
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  <% end %>
-<% end %> </td>
     <% if(admin_signed_in?) %>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
