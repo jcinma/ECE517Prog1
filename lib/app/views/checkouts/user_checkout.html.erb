@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Suggested Books</h1>
+<h1>Listing Available Books</h1>
 
 <table>
   <thead>
@@ -17,7 +17,8 @@
   </thead>
 
   <tbody>
-    <% @books.each do |book| %>
+  <% books =Book.all %>
+    <% books.each do |book| %>
       <tr>
         <td><%= book.ISBN %></td>
         <td><%= book.title %></td>
@@ -26,13 +27,13 @@
         <td><%= book.status %></td>
         <td><%= book.suggested %></td>
         
-    
+		
         <td><%= link_to 'Show', book %></td>
-    <% @checkout = Checkout.new %>
-    
-  <td>  <% if(book.status =="Available") %>
-  <%= form_for(@checkout) do |f| %>
-  <% if @checkout.errors.any? %>
+		<% @checkout = Checkout.new %>
+		
+	<td>	<% if(book.status =="Available") %>
+	<%= form_for(@checkout) do |f| %>
+	<% if @checkout.errors.any? %>
   
       <h2><%= pluralize(@checkout.errors.count, "error") %> prohibited this checkout from being saved:</h2>
 
@@ -45,8 +46,18 @@
   <% end %>
     <div>
     <br>
+	<div class="field">
+
+    <%= f.label :email %><br />
+    <%= f.text_field :status, autofocus: true %>
+
+	<% user = User.where(email: :ecard) %>
+	<% current_user = user%>
+    
+  </div>
+  
     <%= f.hidden_field :book_id, :value =>book.id %>
-   <%= f.hidden_field :status, :value =>"Checkout" %>
+	
 
   </div>
 
@@ -54,7 +65,7 @@
     <%= f.submit %>
   <% end %>
 <% end %> </td>
-    <% if(admin_signed_in?) %>
+		<% if(admin_signed_in?) %>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
