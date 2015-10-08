@@ -24,24 +24,24 @@ class CheckoutsController < ApplicationController
   # POST /checkouts
   # POST /checkouts.json
   def create
-  
- 
-  
 	#@checkout = Checkout.new
 	#@checkout.book_id = @book.id
 	#@checkout.user_id = @user_id
    @checkout = Checkout.new(checkout_params)
- book = Book.find(@checkout.book_id)
- #book = Book.new  
- 
-	if(@checkout.status == 'Checkout')
-	@checkout.user_id = current_user.id
-	book.update(status: 'Checkout', user_id: @checkout.user_id)
-	end
-	else if(@checkout.status == 'Return')
-	@checkout.user_id= book.user_id
-	book.update(status: 'Available', user_id: "")
-	
+	book = Book.find(@checkout.book_id)
+	#book = Book.new  
+ 	if(@checkout.status == 'Checkout')
+		@checkout.user_id = current_user.id
+		user = User.find_by!(email: @checkout.status)
+		@checkout.user_id = user.id
+		book.update(status: 'Checkout', user_id: @checkout.user_id)
+	elsif(@checkout.status == 'Return')
+		@checkout.user_id= book.user_id
+		book.update(status: 'Available', user_id: "")
+	else
+		user = User.find_by!(email: @checkout.status)
+		@checkout.user_id = user.id
+		book.update(status: 'Checkout', user_id: @checkout.user_id)
 	end
     respond_to do |format|
       if @checkout.save
@@ -52,7 +52,7 @@ class CheckoutsController < ApplicationController
         format.json { render json: @checkout.errors, status: :unprocessable_entity }
       end
     end
-  end
+ end
 
   # PATCH/PUT /checkouts/1
   # PATCH/PUT /checkouts/1.json
@@ -79,6 +79,8 @@ class CheckoutsController < ApplicationController
   end
 	def user_history
 	end
+	def user_checkout
+	end
 	
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -88,7 +90,6 @@ class CheckoutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def checkout_params
-      params.require(:checkout).permit(:book_id, :status)
-	  
+      params.require(:checkout).permit(:book_id, :status, :user_id, :email)
     end
 end

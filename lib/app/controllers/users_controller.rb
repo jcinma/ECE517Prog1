@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-before_filter	:authenticate_admin!
+ 
+	before_filter	:authenticate_admin!, only: [:index, :show, :destroy]
   # GET /users
   # GET /users.json
   def index
@@ -27,8 +28,26 @@ if Book.where(user_id: @user.id).blank?
     end
 end
 end
+ def update
+  respond_to do |format|
+ if(user_signed_in? && current_user.id==@user.id)
+   
+      if @user.update(user_params)
+        format.html { redirect_to books_url, notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
 
-  private
+ 
+ else 
+format.html { redirect_to users_url, notice: 'Cant edit other user :).' }
+      format.json { head :no_content }
+    end        
+end
+end 
+ private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
