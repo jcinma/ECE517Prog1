@@ -18,6 +18,10 @@ class UsersController < ApplicationController
   def destroy
   respond_to do |format|
 if Book.where(user_id: @user.id).blank?  
+@checkouts = Checkout.where(user_id: @user.id)
+    @checkouts.each do |checkout|
+      checkout.destroy
+    end
   @user.destroy
     
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
