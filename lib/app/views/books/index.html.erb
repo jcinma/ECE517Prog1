@@ -51,7 +51,9 @@
   </div>
 
   <div class="actions">
+  <% if(user_signed_in?) %>
     <%= f.submit %>
+	<% end %>
   <% end %>
 <% end %> </td>
 		<% if(admin_signed_in?) %>
