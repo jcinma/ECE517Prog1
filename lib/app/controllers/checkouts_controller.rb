@@ -32,14 +32,14 @@ class CheckoutsController < ApplicationController
 	#book = Book.new  
  	if(@checkout.status == 'Checkout')
 		@checkout.user_id = current_user.id
-		user = User.find_by!(email: @checkout.status)
-		@checkout.user_id = user.id
+
+		
 		book.update(status: 'Checkout', user_id: @checkout.user_id)
 	elsif(@checkout.status == 'Return')
 		@checkout.user_id= book.user_id
 		book.update(status: 'Available', user_id: "")
 	else
-		user = User.find_by!(email: @checkout.status)
+		user = User.find_by(email: @checkout.status)
 		@checkout.user_id = user.id
 		book.update(status: 'Checkout', user_id: @checkout.user_id)
 	end
