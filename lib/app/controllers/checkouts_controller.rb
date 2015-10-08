@@ -41,6 +41,7 @@ class CheckoutsController < ApplicationController
 	else
 		user = User.find_by(email: @checkout.status)
 		@checkout.user_id = user.id
+		@checkout.status = 'Checkout'
 		book.update(status: 'Checkout', user_id: @checkout.user_id)
 	end
     respond_to do |format|
