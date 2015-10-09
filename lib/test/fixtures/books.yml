@@ -14,6 +14,14 @@ book_with_null_user:
  author: Rowling
  status: Available
  user: NULL
+ 
+book_with_null_ISBN:
+ ISBN: NULL
+ title: Harry Potter
+ description: Novel
+ author: Rowling
+ status: Available
+ user: pmukher
 
 book_with_null_title:
  ISBN: I1236
@@ -50,7 +58,7 @@ book_with_null_status:
 book_with_duplicate_ISBN:
   ISBN: I1239
   title: Harry Potter
-  description: Novel
+  description: Noveli
   author: Rowling
   status: Available
   user: pmukher
