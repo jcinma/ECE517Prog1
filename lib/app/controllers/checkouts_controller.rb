@@ -38,6 +38,8 @@ class CheckoutsController < ApplicationController
 	elsif(@checkout.status == 'Return')
 		@checkout.user_id= book.user_id
 		book.update(status: 'Available', user_id: "")
+	elsif User.where(email: @checkout.status).blank?
+	@checkout.user_id = nil
 	else
 		user = User.find_by(email: @checkout.status)
 		@checkout.user_id = user.id
@@ -45,7 +47,10 @@ class CheckoutsController < ApplicationController
 		book.update(status: 'Checkout', user_id: @checkout.user_id)
 	end
     respond_to do |format|
-      if @checkout.save
+      if @checkout.user_id == nil
+	  format.html { redirect_to href='/user_checkout', notice: 'Enter correct Email' }
+      format.json { render :show, status: :created, location: @checkout }
+	  elsif @checkout.save
         format.html { redirect_to @checkout, notice: 'Checkout was successfully created.' }
         format.json { render :show, status: :created, location: @checkout }
       else
