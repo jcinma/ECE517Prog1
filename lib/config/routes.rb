@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :checkouts
-  devise_for :users  
+  devise_for :users,  :controllers => { registrations: 'registrations' } 
   scope "/admin" do
   resources :users
 end
