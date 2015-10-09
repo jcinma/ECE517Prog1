@@ -34,7 +34,31 @@
     <% if(admin_signed_in?) %>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<td>
+	<% @book = book %>
+	<%= form_for(@book) do |f| %>
+		<% if @book.errors.any? %>
+		  <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+		  <ul>
+			<% @book.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		  </ul>
+		<% end %>
+	  
+		  <div>
+			<%= f.hidden_field :suggested, :value =>'f' %>
+		  </div>
+
+		<div class="actions">
+		
+			<%= f.submit "Accept" %>
+		
+		</div>
+ <% end %>
+
+ </td>     
+	 </tr>
     <% end %>
     <% end %>
   </tbody>
